@@ -53,13 +53,59 @@
     --gradient-card: linear-gradient(145deg, hsl(var(--tech-blue)) 0%, hsl(var(--tech-darker)) 100%);
   }
 
+  .light {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 190 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 35%;
+
+    --accent: 190 100% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 16% 90%;
+    --input: 210 16% 90%;
+    --ring: 190 100% 40%;
+
+    --radius: 0.75rem;
+
+    /* Custom Tech Theme Colors - Light */
+    --tech-dark: 210 20% 98%;
+    --tech-darker: 0 0% 100%;
+    --tech-blue: 210 40% 96%;
+    --tech-cyan: 190 100% 40%;
+    --tech-cyan-glow: 190 100% 60%;
+    --tech-text: 222 47% 11%;
+    --tech-text-muted: 215 16% 35%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--tech-dark)) 0%, hsl(var(--tech-blue)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--tech-cyan)) 0%, hsl(var(--tech-cyan-glow)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--tech-darker)) 0%, hsl(var(--tech-blue)) 100%);
+  }
+
   * {
     @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground font-inter;
-    background: hsl(var(--tech-dark));
+    background: hsl(var(--background));
   }
 
   html {
