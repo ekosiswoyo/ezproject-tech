@@ -1,37 +1,39 @@
 
 import { Shield, Zap, Users, Trophy, Clock, Headphones } from "lucide-react";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhyChooseUs = () => {
+  const { t } = useLanguage();
   const features = [
     {
       icon: Shield,
-      title: "Keamanan Terjamin",
-      description: "Implementasi standar keamanan tinggi dengan enkripsi dan protokol keamanan terdepan untuk melindungi data bisnis Anda."
+      title: t('whyChoose.security.title'),
+      description: t('whyChoose.security.description')
     },
     {
       icon: Zap,
-      title: "Performa Tinggi",
-      description: "Optimisasi performa maksimal dengan teknologi caching dan CDN untuk memastikan aplikasi berjalan cepat dan responsif."
+      title: t('whyChoose.performance.title'),
+      description: t('whyChoose.performance.description')
     },
     {
       icon: Users,
-      title: "Tim Expert",
-      description: "Tim developer berpengalaman dengan sertifikasi internasional dan expertise di berbagai teknologi modern."
+      title: t('whyChoose.expert.title'),
+      description: t('whyChoose.expert.description')
     },
     {
       icon: Trophy,
-      title: "Kualitas Premium",
-      description: "Standar kualitas tinggi dengan testing menyeluruh dan quality assurance untuk memastikan hasil yang sempurna."
+      title: t('whyChoose.quality.title'),
+      description: t('whyChoose.quality.description')
     },
     {
       icon: Clock,
-      title: "Tepat Waktu",
-      description: "Komitmen menyelesaikan proyek sesuai timeline yang disepakati dengan project management yang terstruktur."
+      title: t('whyChoose.onTime.title'),
+      description: t('whyChoose.onTime.description')
     },
     {
       icon: Headphones,
-      title: "Support 24/7",
-      description: "Layanan support berkelanjutan dengan response time cepat untuk memastikan sistem selalu berjalan optimal."
+      title: t('whyChoose.support.title'),
+      description: t('whyChoose.support.description')
     }
   ];
 
@@ -40,11 +42,10 @@ const WhyChooseUs = () => {
       <div className="section-container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="heading-lg">
-            Mengapa Memilih <span className="text-tech-cyan">TechNova Solutions</span>?
+            {t('whyChoose.title')} <span className="text-tech-cyan">EzProject</span>?
           </h2>
           <p className="body-lg max-w-3xl mx-auto">
-            Kami berkomitmen memberikan solusi teknologi terbaik dengan pendekatan 
-            yang profesional dan hasil yang melampaui ekspektasi.
+            {t('whyChoose.description')}
           </p>
         </div>
 
@@ -88,9 +89,9 @@ const WhyChooseUs = () => {
               </div>
             </div>
 
-            <button className="btn-glow">
+            <a href="#contact" className="btn-glow">
               Mulai Konsultasi Gratis
-            </button>
+            </a>
           </div>
         </div>
       </div>

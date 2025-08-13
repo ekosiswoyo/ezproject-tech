@@ -1,31 +1,58 @@
 
 import { Globe, Smartphone, Settings, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Services = () => {
+  const { t } = useLanguage();
   const services = [
     {
       icon: Globe,
-      title: "Pembuatan Website",
-      description: "Website responsif dan modern dengan teknologi terdepan untuk meningkatkan presence online bisnis Anda.",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Secure & Reliable"]
+      title: t('services.website.title'),
+      description: t('services.website.description'),
+      features: [
+        t('services.website.features.responsive'),
+        t('services.website.features.seo'),
+        t('services.website.features.fast'),
+        t('services.website.features.secure')
+      ],
+      slug: "pembuatan-website"
     },
     {
       icon: Smartphone,
-      title: "Pengembangan Aplikasi",
-      description: "Aplikasi mobile dan desktop yang user-friendly dengan performa tinggi untuk semua platform.",
-      features: ["Cross Platform", "Native Performance", "Intuitive UI/UX", "Cloud Integration"]
+      title: t('services.app.title'),
+      description: t('services.app.description'),
+      features: [
+        t('services.app.features.crossPlatform'),
+        t('services.app.features.performance'),
+        t('services.app.features.ui'),
+        t('services.app.features.cloud')
+      ],
+      slug: "pengembangan-aplikasi"
     },
     {
       icon: Settings,
-      title: "Integrasi Sistem",
-      description: "Mengintegrasikan berbagai sistem bisnis untuk meningkatkan efisiensi dan produktivitas operasional.",
-      features: ["API Integration", "Data Synchronization", "Workflow Automation", "Real-time Monitoring"]
+      title: t('services.integration.title'),
+      description: t('services.integration.description'),
+      features: [
+        t('services.integration.features.api'),
+        t('services.integration.features.sync'),
+        t('services.integration.features.automation'),
+        t('services.integration.features.monitoring')
+      ],
+      slug: "integrasi-sistem"
     },
     {
       icon: Users,
-      title: "Konsultasi IT",
-      description: "Konsultasi strategis untuk transformasi digital dan optimalisasi infrastruktur teknologi perusahaan.",
-      features: ["Digital Strategy", "Technology Audit", "Infrastructure Planning", "Team Training"]
+      title: t('services.consulting.title'),
+      description: t('services.consulting.description'),
+      features: [
+        t('services.consulting.features.strategy'),
+        t('services.consulting.features.audit'),
+        t('services.consulting.features.planning'),
+        t('services.consulting.features.training')
+      ],
+      slug: "konsultasi-it"
     }
   ];
 
@@ -34,11 +61,10 @@ const Services = () => {
       <div className="section-container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="heading-lg">
-            Layanan <span className="text-tech-cyan">Profesional</span> Kami
+            {t('services.title')} <span className="text-tech-cyan">{t('services.titleHighlight')}</span> {t('services.titleSuffix')}
           </h2>
           <p className="body-lg max-w-3xl mx-auto">
-            Kami menyediakan berbagai layanan teknologi komprehensif untuk mendukung 
-            pertumbuhan dan transformasi digital bisnis Anda.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -63,10 +89,13 @@ const Services = () => {
               </div>
 
               <div className="mt-6">
-                <button className="text-tech-cyan font-semibold hover:text-tech-cyan-glow transition-colors duration-300 group">
-                  Learn More
+                <Link 
+                  to={`/service/${service.slug}`}
+                  className="text-tech-cyan font-semibold hover:text-tech-cyan-glow transition-colors duration-300 group inline-flex items-center"
+                >
+                  {t('services.learnMore')}
                   <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -76,19 +105,18 @@ const Services = () => {
         <div className="text-center mt-16">
           <div className="tech-card max-w-4xl mx-auto p-12">
             <h3 className="heading-sm mb-6">
-              Siap untuk Transformasi Digital?
+              {t('services.cta.title')}
             </h3>
             <p className="body-md mb-8">
-              Mari diskusikan bagaimana kami dapat membantu mengembangkan solusi teknologi 
-              yang tepat untuk kebutuhan bisnis Anda.
+              {t('services.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-glow">
-                Konsultasi Gratis
-              </button>
-              <button className="btn-outline-glow">
-                Lihat Portfolio
-              </button>
+              <a href="#contact" className="btn-glow">
+                {t('services.cta.consultation')}
+              </a>
+              <Link to="/portfolio" className="btn-outline-glow">
+                {t('services.cta.portfolio')}
+              </Link>
             </div>
           </div>
         </div>

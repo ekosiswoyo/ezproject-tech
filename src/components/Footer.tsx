@@ -1,38 +1,40 @@
 
-import { Facebook, Twitter, Instagram, Linkedin, Github, ArrowUp } from "lucide-react";
+import { useLanguage } from '@/contexts/LanguageContext';
+import { ArrowUp, Facebook, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const footerLinks = {
     services: [
-      "Pembuatan Website",
-      "Aplikasi Mobile",
-      "Aplikasi Desktop",
-      "Integrasi Sistem",
-      "Konsultasi IT"
+      t('footer.services.website'),
+      t('footer.services.mobile'),
+      t('footer.services.desktop'),
+      t('footer.services.integration'),
+      t('footer.services.consulting')
     ],
     company: [
-      "Tentang Kami",
-      "Tim",
-      "Karir",
-      "Blog",
-      "Kontak"
+      t('footer.company.about'),
+      t('footer.company.team'),
+      t('footer.company.career'),
+      t('footer.company.blog'),
+      t('footer.company.contact')
     ],
     resources: [
-      "Portfolio",
-      "Case Studies",
-      "Dokumentasi",
-      "Support",
-      "FAQ"
+      t('footer.resources.portfolio'),
+      t('footer.resources.caseStudies'),
+      t('footer.resources.documentation'),
+      t('footer.resources.support'),
+      t('footer.resources.faq')
     ],
     legal: [
-      "Privacy Policy",
-      "Terms of Service",
-      "Cookie Policy",
-      "SLA Agreement"
+      t('footer.legal.privacy'),
+      t('footer.legal.terms'),
+      t('footer.legal.cookie'),
+      t('footer.legal.sla')
     ]
   };
 
@@ -54,18 +56,15 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <div>
               <span className="text-3xl font-bold bg-gradient-to-r from-tech-cyan to-tech-cyan-glow bg-clip-text text-transparent">
-                TechNova
-              </span>
+                ezproject              </span>
               <p className="text-tech-text-muted mt-4 leading-relaxed">
-                Empowering businesses with cutting-edge technology solutions. 
-                Kami berkomitmen menghadirkan inovasi digital yang mendorong 
-                pertumbuhan dan transformasi bisnis Anda.
+                {t('footer.description')}
               </p>
             </div>
 
             {/* Social Links */}
             <div>
-              <h4 className="text-tech-text font-semibold mb-4">Ikuti Kami</h4>
+              <h4 className="text-tech-text font-semibold mb-4">{t('footer.followUs')}</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -82,15 +81,15 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div className="space-y-2">
-              <p className="text-tech-text font-semibold">Kontak Cepat</p>
+              <p className="text-tech-text font-semibold">{t('footer.quickContact')}</p>
               <p className="text-tech-text-muted text-sm">+62 21 5555 7777</p>
-              <p className="text-tech-text-muted text-sm">info@technova.solutions</p>
+              <p className="text-tech-text-muted text-sm">noreply@ezproject.tech</p>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-tech-text font-semibold mb-6">Layanan</h4>
+            <h4 className="text-tech-text font-semibold mb-6">{t('footer.sections.services')}</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
@@ -104,7 +103,7 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <h4 className="text-tech-text font-semibold mb-6">Perusahaan</h4>
+            <h4 className="text-tech-text font-semibold mb-6">{t('footer.sections.company')}</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
@@ -118,7 +117,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="text-tech-text font-semibold mb-6">Resources</h4>
+            <h4 className="text-tech-text font-semibold mb-6">{t('footer.sections.resources')}</h4>
             <ul className="space-y-3">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
@@ -132,18 +131,18 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-tech-text font-semibold mb-6">Newsletter</h4>
+            <h4 className="text-tech-text font-semibold mb-6">{t('footer.sections.newsletter')}</h4>
             <p className="text-tech-text-muted text-sm mb-4">
-              Dapatkan update terbaru tentang teknologi dan tips digital.
+              {t('footer.newsletter.description')}
             </p>
             <div className="space-y-3">
               <input
                 type="email"
-                placeholder="Email Anda"
+                placeholder={t('footer.newsletter.placeholder')}
                 className="w-full px-4 py-2 bg-tech-blue/30 border border-tech-cyan/30 rounded-lg text-tech-text placeholder-tech-text-muted focus:border-tech-cyan focus:outline-none transition-colors duration-300 text-sm"
               />
               <button className="w-full btn-glow text-sm py-2">
-                Subscribe
+                {t('footer.newsletter.subscribe')}
               </button>
             </div>
           </div>
@@ -156,7 +155,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-wrap items-center space-x-6 text-sm">
               <p className="text-tech-text-muted">
-                © 2024 TechNova Solutions. All rights reserved.
+                {t('footer.copyright')}
               </p>
               <div className="flex space-x-4">
                 {footerLinks.legal.map((link, index) => (

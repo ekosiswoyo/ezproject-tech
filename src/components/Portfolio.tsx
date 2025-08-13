@@ -1,57 +1,60 @@
 
 import { ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Portfolio = () => {
+  const { t } = useLanguage();
   const projects = [
     {
-      title: "E-Commerce Platform",
-      category: "Web Development",
-      description: "Platform e-commerce lengkap dengan sistem pembayaran terintegrasi dan dashboard admin yang comprehensive.",
+      title: t('portfolio.projects.ecommerce.title'),
+      category: t('portfolio.projects.ecommerce.category'),
+      description: t('portfolio.projects.ecommerce.description'),
       image: "/api/placeholder/600/400",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       link: "#",
       github: "#"
     },
     {
-      title: "Healthcare Management App",
-      category: "Mobile Development",
-      description: "Aplikasi mobile untuk manajemen rumah sakit dengan fitur appointment booking dan telemedicine.",
+      title: t('portfolio.projects.healthcare.title'),
+      category: t('portfolio.projects.healthcare.category'),
+      description: t('portfolio.projects.healthcare.description'),
       image: "/api/placeholder/600/400",
       technologies: ["React Native", "Firebase", "PostgreSQL"],
       link: "#",
       github: "#"
     },
     {
-      title: "ERP System Integration",
-      category: "System Integration",
-      description: "Integrasi sistem ERP dengan berbagai platform eksternal untuk mengoptimalkan workflow perusahaan manufaktur.",
+      title: t('portfolio.projects.erp.title'),
+      category: t('portfolio.projects.erp.category'),
+      description: t('portfolio.projects.erp.description'),
       image: "/api/placeholder/600/400",
       technologies: ["Java", "Oracle", "REST API", "Microservices"],
       link: "#",
       github: "#"
     },
     {
-      title: "Data Analytics Dashboard",
-      category: "Data Visualization",
-      description: "Dashboard analytics real-time untuk monitoring performa bisnis dengan visualisasi data yang interaktif.",
+      title: t('portfolio.projects.analytics.title'),
+      category: t('portfolio.projects.analytics.category'),
+      description: t('portfolio.projects.analytics.description'),
       image: "/api/placeholder/600/400",
       technologies: ["Python", "D3.js", "PostgreSQL", "Docker"],
       link: "#",
       github: "#"
     },
     {
-      title: "IoT Monitoring System",
-      category: "IoT Development",
-      description: "Sistem monitoring IoT untuk smart building dengan sensor terintegrasi dan alert system otomatis.",
+      title: t('portfolio.projects.iot.title'),
+      category: t('portfolio.projects.iot.category'),
+      description: t('portfolio.projects.iot.description'),
       image: "/api/placeholder/600/400",
       technologies: ["Arduino", "MQTT", "React", "InfluxDB"],
       link: "#",
       github: "#"
     },
     {
-      title: "Digital Banking App",
-      category: "Fintech",
-      description: "Aplikasi mobile banking dengan fitur keamanan tinggi dan user experience yang optimal.",
+      title: t('portfolio.projects.banking.title'),
+      category: t('portfolio.projects.banking.category'),
+      description: t('portfolio.projects.banking.description'),
       image: "/api/placeholder/600/400",
       technologies: ["Flutter", "Blockchain", "Kubernetes", "AWS"],
       link: "#",
@@ -64,11 +67,10 @@ const Portfolio = () => {
       <div className="section-container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="heading-lg">
-            Portfolio <span className="text-tech-cyan">Terbaru</span> Kami
+            {t('portfolio.title')} <span className="text-tech-cyan">{t('portfolio.titleHighlight')}</span> {t('portfolio.titleSuffix')}
           </h2>
           <p className="body-lg max-w-3xl mx-auto">
-            Lihat berbagai proyek yang telah kami selesaikan dengan teknologi terdepan 
-            dan standar kualitas tinggi.
+            {t('portfolio.subtitle')}
           </p>
         </div>
 
@@ -122,9 +124,9 @@ const Portfolio = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <button className="btn-outline-glow">
-            Lihat Semua Portfolio
-          </button>
+          <Link to="/portfolio" className="btn-outline-glow">
+            {t('portfolio.viewAll')}
+          </Link>
         </div>
       </div>
     </section>

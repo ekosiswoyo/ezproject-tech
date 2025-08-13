@@ -1,7 +1,9 @@
 
 import { useEffect, useState, useRef } from "react";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Statistics = () => {
+  const { t } = useLanguage();
   const [counters, setCounters] = useState({
     projects: 0,
     clients: 0,
@@ -65,25 +67,25 @@ const Statistics = () => {
   const stats = [
     {
       key: 'projects' as keyof typeof counters,
-      label: "Proyek Selesai",
+      label: t('hero.stats.projects'),
       suffix: "+",
       icon: "🚀"
     },
     {
       key: 'clients' as keyof typeof counters,
-      label: "Klien Puas",
+      label: t('hero.stats.clients'),
       suffix: "+",
       icon: "👥"
     },
     {
       key: 'experience' as keyof typeof counters,
-      label: "Tahun Pengalaman",
+      label: t('hero.stats.experience'),
       suffix: "+",
       icon: "⭐"
     },
     {
       key: 'satisfaction' as keyof typeof counters,
-      label: "Tingkat Kepuasan",
+      label: t('hero.stats.satisfaction'),
       suffix: "%",
       icon: "💯"
     }
@@ -94,11 +96,10 @@ const Statistics = () => {
       <div className="section-container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="heading-lg">
-            Pencapaian <span className="text-tech-cyan">TechNova Solutions</span>
+            {t('statistics.title')} <span className="text-tech-cyan">EzProject</span>
           </h2>
           <p className="body-lg max-w-3xl mx-auto">
-            Angka-angka yang membuktikan dedikasi dan kualitas layanan kami 
-            dalam menghadirkan solusi teknologi terbaik.
+            {t('statistics.description')}
           </p>
         </div>
 

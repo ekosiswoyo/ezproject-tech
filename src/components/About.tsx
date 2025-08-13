@@ -1,7 +1,9 @@
 
 import { Target, Eye, Award } from "lucide-react";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
   return (
     <section id="about" className="section-padding bg-tech-darker">
       <div className="section-container">
@@ -11,35 +13,30 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="heading-lg">
-                About <span className="text-tech-cyan">TechNova Solutions</span>
+                {t('about.title')} <span className="text-tech-cyan">EzProject</span>
               </h2>
               <p className="body-lg">
-                Dengan pengalaman lebih dari 8 tahun di industri teknologi, TechNova Solutions 
-                telah menjadi mitra terpercaya bagi berbagai perusahaan dalam transformasi digital.
+                {t('about.description1')}
               </p>
               <p className="body-md">
-                Kami mengombinasikan keahlian teknis tinggi dengan pemahaman mendalam tentang 
-                kebutuhan bisnis untuk menghadirkan solusi yang tidak hanya inovatif, tetapi 
-                juga praktis dan memberikan nilai tambah nyata.
+                {t('about.description2')}
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="tech-card">
                 <Target className="h-8 w-8 text-tech-cyan mb-4" />
-                <h3 className="text-xl font-semibold text-tech-text mb-2">Misi Kami</h3>
+                <h3 className="text-xl font-semibold text-tech-text mb-2">{t('about.mission.title')}</h3>
                 <p className="text-tech-text-muted">
-                  Menghadirkan solusi teknologi terdepan yang memberdayakan bisnis untuk 
-                  mencapai potensi maksimalnya.
+                  {t('about.mission.description')}
                 </p>
               </div>
 
               <div className="tech-card">
                 <Eye className="h-8 w-8 text-tech-cyan mb-4" />
-                <h3 className="text-xl font-semibold text-tech-text mb-2">Visi Kami</h3>
+                <h3 className="text-xl font-semibold text-tech-text mb-2">{t('about.vision.title')}</h3>
                 <p className="text-tech-text-muted">
-                  Menjadi perusahaan teknologi terkemuka yang mendorong inovasi dan 
-                  transformasi digital di Indonesia.
+                  {t('about.vision.description')}
                 </p>
               </div>
             </div>
@@ -51,8 +48,8 @@ const About = () => {
               <div className="flex items-center space-x-4">
                 <Award className="h-12 w-12 text-tech-cyan" />
                 <div>
-                  <h3 className="text-2xl font-bold text-tech-text">Mengapa Memilih Kami?</h3>
-                  <p className="text-tech-text-muted">Keunggulan yang membedakan kami</p>
+                  <h3 className="text-2xl font-bold text-tech-text">{t('about.whyChooseUs.title')}</h3>
+                  <p className="text-tech-text-muted">{t('about.whyChooseUs.subtitle')}</p>
                 </div>
               </div>
 
@@ -60,32 +57,32 @@ const About = () => {
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-tech-cyan rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-tech-text">Tim Expert Berpengalaman</h4>
-                    <p className="text-tech-text-muted text-sm">Developer dan konsultan dengan sertifikasi internasional</p>
+                    <h4 className="font-semibold text-tech-text">{t('about.advantages.expert.title')}</h4>
+                    <p className="text-tech-text-muted text-sm">{t('about.advantages.expert.description')}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-tech-cyan rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-tech-text">Teknologi Terdepan</h4>
-                    <p className="text-tech-text-muted text-sm">Menggunakan framework dan tools terbaru untuk hasil optimal</p>
+                    <h4 className="font-semibold text-tech-text">{t('about.advantages.technology.title')}</h4>
+                    <p className="text-tech-text-muted text-sm">{t('about.advantages.technology.description')}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-tech-cyan rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-tech-text">Dukungan 24/7</h4>
-                    <p className="text-tech-text-muted text-sm">Layanan support dan maintenance berkelanjutan</p>
+                    <h4 className="font-semibold text-tech-text">{t('about.advantages.support.title')}</h4>
+                    <p className="text-tech-text-muted text-sm">{t('about.advantages.support.description')}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-tech-cyan rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="font-semibold text-tech-text">Harga Kompetitif</h4>
-                    <p className="text-tech-text-muted text-sm">Solusi berkualitas tinggi dengan investasi yang efisien</p>
+                    <h4 className="font-semibold text-tech-text">{t('about.advantages.pricing.title')}</h4>
+                    <p className="text-tech-text-muted text-sm">{t('about.advantages.pricing.description')}</p>
                   </div>
                 </div>
               </div>

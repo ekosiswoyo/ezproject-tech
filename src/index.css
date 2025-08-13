@@ -1,12 +1,19 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
-/* TechNova Solutions Design System */
+/* EzProject Design System */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-padding-top: 80px; /* Account for fixed navbar */
+  }
   :root {
     --background: 10 25% 9%;
     --foreground: 200 100% 95%;
@@ -164,7 +171,7 @@
   }
 
   .section-container {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
   }
 
   /* Typography */

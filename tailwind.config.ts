@@ -56,7 +56,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom TechNova Colors
+				// Custom EzProject Colors
 				'tech-dark': 'hsl(var(--tech-dark))',
 				'tech-darker': 'hsl(var(--tech-darker))',
 				'tech-blue': 'hsl(var(--tech-blue))',

@@ -1,8 +1,10 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Testimonials = () => {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
@@ -11,7 +13,7 @@ const Testimonials = () => {
       position: "CEO",
       company: "PT Maju Bersama",
       rating: 5,
-      text: "TechNova Solutions benar-benar memahami kebutuhan bisnis kami. Sistem ERP yang mereka kembangkan meningkatkan efisiensi operasional hingga 40%. Tim yang profesional dan support yang responsif.",
+      text: "EzProject benar-benar memahami kebutuhan bisnis kami. Sistem ERP yang mereka kembangkan meningkatkan efisiensi operasional hingga 40%. Tim yang profesional dan support yang responsif.",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -19,7 +21,7 @@ const Testimonials = () => {
       position: "IT Manager",
       company: "CV Digital Nusantara",
       rating: 5,
-      text: "Aplikasi mobile yang dikembangkan TechNova sangat user-friendly dan performanya luar biasa. Proses development yang transparan dan hasil yang melampaui ekspektasi kami.",
+      text: "Aplikasi mobile yang dikembangkan EzProject sangat user-friendly dan performanya luar biasa. Proses development yang transparan dan hasil yang melampaui ekspektasi kami.",
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b332c2bd?w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -27,7 +29,7 @@ const Testimonials = () => {
       position: "Direktur Operasional",
       company: "PT Teknologi Masa Depan",
       rating: 5,
-      text: "Konsultasi IT dari TechNova membantu kami merencanakan roadmap digital transformation yang tepat. ROI yang signifikan dan implementasi yang smooth tanpa gangguan operasional.",
+      text: "Konsultasi IT dari EzProject membantu kami merencanakan roadmap digital transformation yang tepat. ROI yang signifikan dan implementasi yang smooth tanpa gangguan operasional.",
       avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -35,7 +37,7 @@ const Testimonials = () => {
       position: "Founder",
       company: "Startup InnovateTech",
       rating: 5,
-      text: "Sebagai startup, kami membutuhkan partner teknologi yang dapat tumbuh bersama kami. TechNova memberikan solusi scalable dengan budget yang reasonable. Highly recommended!",
+      text: "Sebagai startup, kami membutuhkan partner teknologi yang dapat tumbuh bersama kami. EzProject memberikan solusi scalable dengan budget yang reasonable. Highly recommended!",
       avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face"
     },
     {
@@ -43,7 +45,7 @@ const Testimonials = () => {
       position: "CTO",
       company: "PT Global Solutions",
       rating: 5,
-      text: "Integrasi sistem yang kompleks menjadi mudah dengan expertise TechNova. Tim mereka sangat detail dalam planning dan execution. Support after-sales yang excellent.",
+      text: "Integrasi sistem yang kompleks menjadi mudah dengan expertise EzProject. Tim mereka sangat detail dalam planning dan execution. Support after-sales yang excellent.",
       avatar: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150&h=150&fit=crop&crop=face"
     }
   ];
@@ -63,11 +65,10 @@ const Testimonials = () => {
       <div className="section-container">
         <div className="text-center mb-16 space-y-4">
           <h2 className="heading-lg">
-            Testimoni <span className="text-tech-cyan">Klien</span> Kami
+            {t('testimonials.title')} <span className="text-tech-cyan">{t('testimonials.titleHighlight')}</span> {t('testimonials.titleSuffix')}
           </h2>
           <p className="body-lg max-w-3xl mx-auto">
-            Dengarkan langsung dari klien-klien yang telah merasakan manfaat 
-            solusi teknologi dari TechNova Solutions.
+            {t('testimonials.description')}
           </p>
         </div>
 
@@ -160,11 +161,11 @@ const Testimonials = () => {
             </h3>
             <p className="body-md mb-6">
               Jadilah bagian dari lebih dari 200+ perusahaan yang telah mempercayakan 
-              transformasi digital mereka kepada TechNova Solutions.
+              transformasi digital mereka kepada EzProject.
             </p>
-            <button className="btn-glow">
+            <a href="#contact" className="btn-glow">
               Konsultasi Gratis Sekarang
-            </button>
+            </a>
           </div>
         </div>
       </div>

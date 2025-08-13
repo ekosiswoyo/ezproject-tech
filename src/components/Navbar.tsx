@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import LanguageToggle from "./LanguageToggle";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,12 +18,24 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Contact", href: "#contact" },
+    { label: t('nav.home'), href: "#home" },
+    { label: t('nav.about'), href: "#about" },
+    { label: t('nav.services'), href: "#services" },
+    { label: t('nav.portfolio'), href: "#portfolio" },
+    { label: t('nav.contact'), href: "#contact" },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -30,7 +45,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <span className="text-2xl font-bold bg-gradient-to-r from-tech-cyan to-tech-cyan-glow bg-clip-text text-transparent">
-              TechNova
+              ezproject           
             </span>
           </div>
 
@@ -41,7 +56,8 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-tech-text hover:text-tech-cyan transition-colors duration-300 font-medium"
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-tech-text hover:text-tech-cyan transition-colors duration-300 font-medium cursor-pointer"
                 >
                   {item.label}
                 </a>
@@ -50,9 +66,13 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
+            <LanguageToggle />
             <ThemeToggle />
-            <button className="btn-glow">
-              Get Started
+            <button 
+              className="btn-glow"
+              onClick={(e) => handleNavClick(e as any, '#contact')}
+            >
+              {t('nav.getStarted')}
             </button>
           </div>
 
@@ -75,15 +95,22 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-3 py-2 text-tech-text hover:text-tech-cyan transition-colors duration-300"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="block px-3 py-2 text-tech-text hover:text-tech-cyan transition-colors duration-300 cursor-pointer"
                 >
                   {item.label}
                 </a>
               ))}
+              <div className="px-3 py-2 flex gap-2">
+                <LanguageToggle />
+                <ThemeToggle />
+              </div>
               <div className="px-3 py-2">
-                <button className="btn-glow w-full">
-                  Get Started
+                <button 
+                  className="btn-glow w-full"
+                  onClick={(e) => handleNavClick(e as any, '#contact')}
+                >
+                  {t('nav.getStarted')}
                 </button>
               </div>
             </div>
