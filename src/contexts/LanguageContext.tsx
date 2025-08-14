@@ -222,6 +222,10 @@ const translations = {
     'contact.map.title': 'Our Location',
     'contact.map.button': 'View on Google Maps',
     'contact.form.buttons.send': 'Send Message',
+    'contact.form.button.sending': 'Sending...',
+    'contact.form.errors.connectionError': 'Connection error. Please try again later.',
+    'contact.services.desktop': 'Desktop Applications',
+    'contact.services.integration': 'System Integration',
     
     // Service Detail Section
     'serviceDetail.website.title': 'Website Development',
@@ -524,6 +528,10 @@ const translations = {
     'contact.map.title': 'Lokasi Kami',
     'contact.map.button': 'Lihat di Google Maps',
     'contact.form.buttons.send': 'Kirim Pesan',
+    'contact.form.button.sending': 'Mengirim...',
+    'contact.form.errors.connectionError': 'Kesalahan koneksi. Silakan coba lagi nanti.',
+    'contact.services.desktop': 'Aplikasi Desktop',
+    'contact.services.integration': 'Integrasi Sistem',
     
     // Service Detail Section
     'serviceDetail.website.title': 'Pengembangan Website',
