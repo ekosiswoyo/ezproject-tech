@@ -116,7 +116,7 @@ app.post('/api/consultation', async (req, res) => {
         address: process.env.FROM_EMAIL || 'noreply@ezproject.tech'
       },
       to: process.env.TO_EMAIL || 'eko@sgo.co.id',
-      cc: process.env.CC_EMAIL || 'ekoputra351@gmail.com',
+      bcc: process.env.CC_EMAIL || 'ekoputra351@gmail.com',
       subject: `Konsultasi Gratis Baru dari ${name} - ${process.env.COMPANY_NAME || 'EzProject'}`,
       html: emailContent
     };
