@@ -1,0 +1,36 @@
+{
+  "name": "TechNova Visionary Showcase",
+  "description": "A modern React application with Node.js backend",
+  "repository": "https://github.com/your-username/technova-visionary-showcase",
+  "keywords": ["react", "nodejs", "express", "vite"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment mode",
+      "value": "production"
+    },
+    "EMAIL_USER": {
+      "description": "Gmail address for sending emails"
+    },
+    "EMAIL_PASS": {
+      "description": "Gmail app password"
+    },
+    "TO_EMAIL": {
+      "description": "Default recipient email"
+    },
+    "CC_EMAIL": {
+      "description": "CC recipient email"
+    },
+    "FROM_EMAIL": {
+      "description": "From email address"
+    },
+    "COMPANY_NAME": {
+      "description": "Company name",
+      "value": "TechNova Solutions"
+    }
+  }
+}

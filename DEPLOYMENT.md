@@ -45,14 +45,18 @@ heroku login
 # Create new app
 heroku create your-app-name
 
+# Set buildpack to Node.js only (important!)
+heroku buildpacks:clear
+heroku buildpacks:add heroku/nodejs
+
 # Set environment variables
 heroku config:set NODE_ENV=production
-heroku config:set EMAIL_USER=your-gmail@gmail.com
-heroku config:set EMAIL_PASS=your-app-password
+heroku config:set EMAIL_USER=enfams19@gmail.com
+heroku config:set EMAIL_PASS=zsyc uaph uumr vbbr
 heroku config:set TO_EMAIL=eko@sgo.co.id
 heroku config:set CC_EMAIL=ekoputra351@gmail.com
-heroku config:set FROM_EMAIL=noreply@yourdomain.com
-heroku config:set COMPANY_NAME="TechNova Solutions"
+heroku config:set FROM_EMAIL=noreply@ezproject.tech
+heroku config:set COMPANY_NAME="ezproject."
 
 # Deploy
 git add .
@@ -193,16 +197,22 @@ npm install winston
 
 ### Common Issues
 
-1. **Email tidak terkirim**:
+1. **Buildpack Detection Error**:
+   - Pastikan hanya menggunakan Node.js buildpack: `heroku buildpacks:clear && heroku buildpacks:add heroku/nodejs`
+   - Periksa file `Procfile` ada di root directory
+   - Pastikan `package.json` memiliki script "start"
+   - Hapus file PHP yang tidak diperlukan (composer.json, *.php)
+
+2. **Email tidak terkirim**:
    - Periksa Gmail App Password
    - Pastikan 2FA aktif di Gmail
    - Cek environment variables
 
-2. **CORS Error**:
+3. **CORS Error**:
    - Update CORS origins
    - Pastikan frontend URL benar
 
-3. **Port Issues**:
+4. **Port Issues**:
    - Gunakan PORT dari environment variable
    - Pastikan port tidak digunakan aplikasi lain
 

@@ -3,6 +3,12 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import nodemailer from 'nodemailer';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// ES module dirname equivalent
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load environment variables
 dotenv.config();
@@ -13,7 +19,7 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourdomain.com', 'https://www.yourdomain.com'] 
+    ? ['https://nefix.studio', 'https://www.nefix.studio'] 
     : ['http://localhost:3000', 'http://localhost:8081', 'http://localhost:5173']
 }));
 app.use(bodyParser.json({ limit: '10mb' }));
@@ -137,7 +143,29 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'OK', message: 'Server is running' });
 });
 
-// Start server
+// Serve static files in production
+if (process.env.NODE_ENV === 'production') {
+  // Serve static files from the dist directory
+  app.use(express.static(path.join(__dirname, 'dist')));
+  
+  // Handle React routing, return all requests to React app
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
+} else {
+  // Development mode - just show a simple message for non-API routes
+  app.get('/', (req, res) => {
+    res.json({
+      success: true,
+      message: 'Server is running in development mode',
+      endpoints: {
+        health: '/api/health',
+        consultation: 'POST /api/consultation'
+      }
+    });
+  });
+}
+
 // Global error handler
 app.use((err, req, res, next) => {
   console.error('Global error handler:', err);
