@@ -550,8 +550,14 @@ const translations = {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(() => {
+    // Clear any existing language setting to force Indonesian as default
     const saved = localStorage.getItem('language');
-    return (saved as Language) || 'id'; // Default to Indonesian
+    // Only use saved language if it exists and is valid, otherwise default to Indonesian
+    if (saved && (saved === 'en' || saved === 'id')) {
+      return saved as Language;
+    }
+    // Always default to Indonesian
+    return 'id';
   });
 
   useEffect(() => {
