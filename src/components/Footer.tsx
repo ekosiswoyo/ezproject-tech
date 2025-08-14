@@ -31,10 +31,10 @@ const Footer = () => {
       t('footer.resources.faq')
     ],
     legal: [
-      t('footer.legal.privacy'),
-      t('footer.legal.terms'),
-      t('footer.legal.cookie'),
-      t('footer.legal.sla')
+      // t('footer.legal.privacy'),
+      // t('footer.legal.terms'),
+      // t('footer.legal.cookie'),
+      // t('footer.legal.sla')
     ]
   };
 
@@ -131,7 +131,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-tech-text font-semibold mb-6">{t('footer.sections.newsletter')}</h4>
+            {/* <h4 className="text-tech-text font-semibold mb-6">{t('footer.sections.newsletter')}</h4>
             <p className="text-tech-text-muted text-sm mb-4">
               {t('footer.newsletter.description')}
             </p>
@@ -144,7 +144,7 @@ const Footer = () => {
               <button className="w-full btn-glow text-sm py-2">
                 {t('footer.newsletter.subscribe')}
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -68,12 +68,12 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-3">
             <LanguageToggle />
             <ThemeToggle />
-            <button 
+            {/* <button 
               className="btn-glow"
               onClick={(e) => handleNavClick(e as any, '#contact')}
             >
               {t('nav.getStarted')}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile menu button */}

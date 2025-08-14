@@ -157,7 +157,7 @@ const translations = {
     // Testimonials Section
     'testimonials.title': 'Client',
     'testimonials.titleHighlight': 'Testimonials',
-    'testimonials.titleSuffix': '',
+    'testimonials.titleSuffix': 'We Serve',
     'testimonials.description': 'Hear directly from clients who have experienced the benefits of technology solutions from EzProject.',
     
     // Footer Section
@@ -480,7 +480,7 @@ const translations = {
     'contact.info.email.title': 'Email',
     'contact.info.email.description': 'noreply@ezproject.tech',
     'contact.info.hours.title': 'Jam Operasional',
-    'contact.info.hours.description': 'Senin - Jumat: 09:00 - 18:00',
+    'contact.info.hours.description': 'Senin - Jumat: 09:00 - 20:00',
     'contact.services.website': 'Pembuatan Website',
     'contact.services.mobile': 'Pengembangan Aplikasi Mobile',
     'contact.services.system': 'Integrasi Sistem',

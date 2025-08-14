@@ -176,7 +176,7 @@
 
   /* Typography */
   .heading-xl {
-    @apply text-5xl md:text-6xl lg:text-7xl font-black hero-text leading-tight;
+    @apply text-5xl md:text-6xl lg:text-7xl font-black hero-text leading-relaxed;
   }
 
   .heading-lg {

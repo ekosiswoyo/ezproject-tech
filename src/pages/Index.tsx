@@ -1,14 +1,12 @@
 
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
 import About from "@/components/About";
-import Services from "@/components/Services";
-import Portfolio from "@/components/Portfolio";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Statistics from "@/components/Statistics";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Portfolio from "@/components/Portfolio";
+import Services from "@/components/Services";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 const Index = () => {
   return (
@@ -19,8 +17,8 @@ const Index = () => {
       <Services />
       <Portfolio />
       <WhyChooseUs />
-      <Statistics />
-      <Testimonials />
+      {/* <Statistics /> */}
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>
