@@ -2,6 +2,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { AlertCircle, CheckCircle, Clock, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import { API_ENDPOINTS } from '@/config/api';
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -33,7 +34,7 @@ const Contact = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('http://localhost:3001/api/consultation', {
+      const response = await fetch(API_ENDPOINTS.CONSULTATION, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,13 +61,13 @@ const Contact = () => {
       } else {
         setSubmitStatus({
           type: 'error',
-          message: result.message || t('contact.form.errors.submitError')
+          message: result.message || t('contact.form.error')
         });
       }
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: t('contact.form.errors.connectionError')
+        message: t('contact.form.serverError')
       });
     } finally {
       setIsSubmitting(false);
