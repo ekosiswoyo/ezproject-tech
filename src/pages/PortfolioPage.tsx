@@ -186,7 +186,7 @@ const PortfolioPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="section-padding bg-tech-darker">
+      <section id="portfolio" className="section-padding bg-tech-darker">
         <div className="section-container">
           <div className="flex items-center mb-8">
             <Link to="/" className="flex items-center text-tech-cyan hover:text-tech-cyan/80 transition-colors mr-6">
