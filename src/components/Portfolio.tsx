@@ -2,61 +2,157 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from '@/contexts/LanguageContext';
+import work1 from '@/assets/images/portfolio/work1.png';
+import work2 from '@/assets/images/portfolio/work2.png';
+import work3 from '@/assets/images/portfolio/work3.png';
+import work4 from '@/assets/images/portfolio/work4.png';
+import work5 from '@/assets/images/portfolio/work5.png';
+import work6 from '@/assets/images/portfolio/work6.png';
+import work7 from '@/assets/images/portfolio/work7.png';
+import work8 from '@/assets/images/portfolio/work8.png';
+import work9 from '@/assets/images/portfolio/work9.png';
+import work10 from '@/assets/images/portfolio/work10.png';
+import work11 from '@/assets/images/portfolio/work11.png';
+import work12 from '@/assets/images/portfolio/work12.png';
+import work13 from '@/assets/images/portfolio/work13.png';
+import work14 from '@/assets/images/portfolio/work14.png';
+import work15 from '@/assets/images/portfolio/work15.png';
 
 const Portfolio = () => {
   const { t } = useLanguage();
   const projects = [
     {
-      title: t('portfolio.projects.ecommerce.title'),
-      category: t('portfolio.projects.ecommerce.category'),
-      description: t('portfolio.projects.ecommerce.description'),
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: t('portfolio.projects.migration.title'),
+      category: t('portfolio.projects.migration.category'),
+      description: t('portfolio.projects.migration.description'),
+      image: work1,
+      technologies: ["Pentaho Data Integration","DB2","Oracle"],
       link: "#",
       github: "#"
     },
     {
-      title: t('portfolio.projects.healthcare.title'),
-      category: t('portfolio.projects.healthcare.category'),
-      description: t('portfolio.projects.healthcare.description'),
-      image: "/api/placeholder/600/400",
-      technologies: ["React Native", "Firebase", "PostgreSQL"],
+      title: t('portfolio.projects.bprmaa.title'),
+      category: t('portfolio.projects.bprmaa.category'),
+      description: t('portfolio.projects.bprmaa.description'),
+      image: work2,
+      technologies: ["Wordpress", "MySql"],
       link: "#",
       github: "#"
     },
     {
-      title: t('portfolio.projects.erp.title'),
-      category: t('portfolio.projects.erp.category'),
-      description: t('portfolio.projects.erp.description'),
-      image: "/api/placeholder/600/400",
-      technologies: ["Java", "Oracle", "REST API", "Microservices"],
+      title: t('portfolio.projects.bprmaainternal.title'),
+      category: t('portfolio.projects.bprmaainternal.category'),
+      description: t('portfolio.projects.bprmaainternal.description'),
+      image: work3,
+      technologies: ["Laravel", "MySql", "centOs"],
       link: "#",
       github: "#"
     },
     {
-      title: t('portfolio.projects.analytics.title'),
-      category: t('portfolio.projects.analytics.category'),
-      description: t('portfolio.projects.analytics.description'),
-      image: "/api/placeholder/600/400",
-      technologies: ["Python", "D3.js", "PostgreSQL", "Docker"],
+      title: t('portfolio.projects.taskmanagement.title'),
+      category: t('portfolio.projects.taskmanagement.category'),
+      description: t('portfolio.projects.taskmanagement.description'),
+      image: work4,
+      technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
     },
     {
-      title: t('portfolio.projects.iot.title'),
-      category: t('portfolio.projects.iot.category'),
-      description: t('portfolio.projects.iot.description'),
-      image: "/api/placeholder/600/400",
-      technologies: ["Arduino", "MQTT", "React", "InfluxDB"],
+      title: t('portfolio.projects.stock.title'),
+      category: t('portfolio.projects.stock.category'),
+      description: t('portfolio.projects.stock.description'),
+      image: work5,
+      technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
     },
     {
-      title: t('portfolio.projects.banking.title'),
-      category: t('portfolio.projects.banking.category'),
-      description: t('portfolio.projects.banking.description'),
-      image: "/api/placeholder/600/400",
-      technologies: ["Flutter", "Blockchain", "Kubernetes", "AWS"],
+      title: t('portfolio.projects.lelang.title'),
+      category: t('portfolio.projects.lelang.category'),
+      description: t('portfolio.projects.lelang.description'),
+      image:work6,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.filesharing.title'),
+      category: t('portfolio.projects.filesharing.category'),
+      description: t('portfolio.projects.filesharing.description'),
+      image:work7,
+      technologies: ["Nextcloud", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.kpi.title'),
+      category: t('portfolio.projects.kpi.category'),
+      description: t('portfolio.projects.kpi.description'),
+      image:work8,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.zimbra.title'),
+      category: t('portfolio.projects.zimbra.category'),
+      description: t('portfolio.projects.zimbra.description'),
+      image:work9,
+      technologies: ["ZImbra", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.leave.title'),
+      category: t('portfolio.projects.leave.category'),
+      description: t('portfolio.projects.leave.description'),
+      image:work10,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.recruitment.title'),
+      category: t('portfolio.projects.recruitment.category'),
+      description: t('portfolio.projects.recruitment.description'),
+      image:work11,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.disabilities.title'),
+      category: t('portfolio.projects.disabilities.category'),
+      description: t('portfolio.projects.disabilities.description'),
+      image:work12,
+      technologies: ["React Native","Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.smk.title'),
+      category: t('portfolio.projects.smk.category'),
+      description: t('portfolio.projects.smk.description'),
+      image:work13,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.roman.title'),
+      category: t('portfolio.projects.roman.category'),
+      description: t('portfolio.projects.roman.description'),
+      image:work14,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.roma.title'),
+      category: t('portfolio.projects.roma.category'),
+      description: t('portfolio.projects.roma.description'),
+      image:work15,
+      technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
     }
@@ -78,15 +174,14 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div key={index} className="tech-card group overflow-hidden">
               {/* Project Image */}
-              <div className="relative overflow-hidden rounded-xl mb-6 bg-tech-blue/30 h-48">
-                <div className="absolute inset-0 bg-gradient-to-br from-tech-cyan/20 to-tech-blue/40 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-tech-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <div className="w-8 h-8 bg-tech-cyan rounded-lg"></div>
-                    </div>
-                    <p className="text-tech-text font-medium">{project.category}</p>
-                  </div>
-                </div>
+              <div className="relative overflow-hidden rounded-xl mb-6 h-48">
+                {/* Actual image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-tech-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">

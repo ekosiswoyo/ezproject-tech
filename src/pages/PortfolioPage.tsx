@@ -3,10 +3,27 @@ import { Link } from "react-router-dom";
 import { ExternalLink, Github, ArrowLeft, Filter } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useLanguage } from '@/contexts/LanguageContext';
+import work1 from '@/assets/images/portfolio/work1.png';
+import work2 from '@/assets/images/portfolio/work2.png';
+import work3 from '@/assets/images/portfolio/work3.png';
+import work4 from '@/assets/images/portfolio/work4.png';
+import work5 from '@/assets/images/portfolio/work5.png';
+import work6 from '@/assets/images/portfolio/work6.png';
+import work7 from '@/assets/images/portfolio/work7.png';
+import work8 from '@/assets/images/portfolio/work8.png';
+import work9 from '@/assets/images/portfolio/work9.png';
+import work10 from '@/assets/images/portfolio/work10.png';
+import work11 from '@/assets/images/portfolio/work11.png';
+import work12 from '@/assets/images/portfolio/work12.png';
+import work13 from '@/assets/images/portfolio/work13.png';
+import work14 from '@/assets/images/portfolio/work14.png';
+import work15 from '@/assets/images/portfolio/work15.png';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const { t } = useLanguage();
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -15,125 +32,146 @@ const PortfolioPage = () => {
 
   const projects = [
     {
-      id: 1,
-      title: "E-Commerce Platform",
-      category: "Web Development",
-      description: "Platform e-commerce lengkap dengan sistem pembayaran terintegrasi dan dashboard admin yang comprehensive. Dilengkapi dengan fitur inventory management, customer analytics, dan multi-payment gateway.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Redis", "AWS"],
+      title: t('portfolio.projects.migration.title'),
+      category: t('portfolio.projects.migration.category'),
+      description: t('portfolio.projects.migration.description'),
+      image: work1,
+      technologies: ["Pentaho Data Integration","DB2","Oracle"],
       link: "#",
-      github: "#",
-      duration: "6 bulan",
-      client: "PT. Digital Commerce Indonesia",
-      year: "2024"
+      github: "#"
     },
     {
-      id: 2,
-      title: "Healthcare Management App",
-      category: "Mobile Development",
-      description: "Aplikasi mobile untuk manajemen rumah sakit dengan fitur appointment booking dan telemedicine. Terintegrasi dengan sistem EMR dan payment gateway untuk kemudahan pasien.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React Native", "Firebase", "PostgreSQL", "WebRTC", "Push Notifications"],
+      title: t('portfolio.projects.bprmaa.title'),
+      category: t('portfolio.projects.bprmaa.category'),
+      description: t('portfolio.projects.bprmaa.description'),
+      image: work2,
+      technologies: ["Wordpress", "MySql"],
       link: "#",
-      github: "#",
-      duration: "8 bulan",
-      client: "RS. Teknologi Medis",
-      year: "2024"
+      github: "#"
     },
     {
-      id: 3,
-      title: "ERP System Integration",
-      category: "System Integration",
-      description: "Integrasi sistem ERP dengan berbagai platform eksternal untuk mengoptimalkan workflow perusahaan manufaktur. Mencakup inventory, production planning, dan financial reporting.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Java", "Oracle", "REST API", "Microservices", "Docker", "Kubernetes"],
+      title: t('portfolio.projects.bprmaainternal.title'),
+      category: t('portfolio.projects.bprmaainternal.category'),
+      description: t('portfolio.projects.bprmaainternal.description'),
+      image: work3,
+      technologies: ["Laravel", "MySql", "centOs"],
       link: "#",
-      github: "#",
-      duration: "12 bulan",
-      client: "PT. Manufaktur Teknologi",
-      year: "2023"
+      github: "#"
     },
     {
-      id: 4,
-      title: "Data Analytics Dashboard",
-      category: "Data Visualization",
-      description: "Dashboard analytics real-time untuk monitoring performa bisnis dengan visualisasi data yang interaktif. Dilengkapi dengan predictive analytics dan automated reporting.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Python", "D3.js", "PostgreSQL", "Docker", "Tableau", "Apache Kafka"],
+      title: t('portfolio.projects.taskmanagement.title'),
+      category: t('portfolio.projects.taskmanagement.category'),
+      description: t('portfolio.projects.taskmanagement.description'),
+      image: work4,
+      technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
-      github: "#",
-      duration: "4 bulan",
-      client: "PT. Analytics Solutions",
-      year: "2024"
+      github: "#"
     },
     {
-      id: 5,
-      title: "IoT Monitoring System",
-      category: "IoT Development",
-      description: "Sistem monitoring IoT untuk smart building dengan sensor terintegrasi dan alert system otomatis. Mencakup energy management, security monitoring, dan environmental control.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Arduino", "MQTT", "React", "InfluxDB", "Grafana", "Node-RED"],
+      title: t('portfolio.projects.stock.title'),
+      category: t('portfolio.projects.stock.category'),
+      description: t('portfolio.projects.stock.description'),
+      image: work5,
+      technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
-      github: "#",
-      duration: "10 bulan",
-      client: "Smart Building Corp",
-      year: "2023"
+      github: "#"
     },
     {
-      id: 6,
-      title: "Digital Banking App",
-      category: "Fintech",
-      description: "Aplikasi mobile banking dengan fitur keamanan tinggi dan user experience yang optimal. Dilengkapi dengan biometric authentication, QR payment, dan investment features.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Flutter", "Blockchain", "Kubernetes", "AWS", "Biometric SDK", "Encryption"],
+      title: t('portfolio.projects.lelang.title'),
+      category: t('portfolio.projects.lelang.category'),
+      description: t('portfolio.projects.lelang.description'),
+      image: work6,
+      technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
-      github: "#",
-      duration: "14 bulan",
-      client: "Bank Digital Nusantara",
-      year: "2023"
+      github: "#"
     },
     {
-      id: 7,
-      title: "Learning Management System",
-      category: "Web Development",
-      description: "Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan progress tracking. Mendukung live class, assignment submission, dan certificate generation.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Vue.js", "Laravel", "MySQL", "WebRTC", "FFmpeg", "Redis"],
+      title: t('portfolio.projects.filesharing.title'),
+      category: t('portfolio.projects.filesharing.category'),
+      description: t('portfolio.projects.filesharing.description'),
+      image: work7,
+      technologies: ["Nextcloud", "MySql", "centOS"],
       link: "#",
-      github: "#",
-      duration: "7 bulan",
-      client: "EduTech Indonesia",
-      year: "2024"
+      github: "#"
     },
     {
-      id: 8,
-      title: "Supply Chain Management",
-      category: "System Integration",
-      description: "Sistem manajemen supply chain end-to-end dengan tracking real-time dan predictive analytics. Terintegrasi dengan supplier portal dan logistics management.",
-      image: "/api/placeholder/600/400",
-      technologies: ["Spring Boot", "PostgreSQL", "Apache Kafka", "Elasticsearch", "Docker"],
+      title: t('portfolio.projects.kpi.title'),
+      category: t('portfolio.projects.kpi.category'),
+      description: t('portfolio.projects.kpi.description'),
+      image: work8,
+      technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
-      github: "#",
-      duration: "9 bulan",
-      client: "PT. Logistik Teknologi",
-      year: "2023"
+      github: "#"
     },
     {
-      id: 9,
-      title: "Food Delivery App",
-      category: "Mobile Development",
-      description: "Aplikasi food delivery dengan fitur real-time tracking, multiple payment options, dan rating system. Dilengkapi dengan driver app dan merchant dashboard.",
-      image: "/api/placeholder/600/400",
-      technologies: ["React Native", "Node.js", "MongoDB", "Socket.io", "Google Maps API"],
+      title: t('portfolio.projects.zimbra.title'),
+      category: t('portfolio.projects.zimbra.category'),
+      description: t('portfolio.projects.zimbra.description'),
+      image: work9,
+      technologies: ["ZImbra", "MySql", "centOS"],
       link: "#",
-      github: "#",
-      duration: "5 bulan",
-      client: "FoodTech Startup",
-      year: "2024"
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.leave.title'),
+      category: t('portfolio.projects.leave.category'),
+      description: t('portfolio.projects.leave.description'),
+      image: work10,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.recruitment.title'),
+      category: t('portfolio.projects.recruitment.category'),
+      description: t('portfolio.projects.recruitment.description'),
+      image: work11,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.disabilities.title'),
+      category: t('portfolio.projects.disabilities.category'),
+      description: t('portfolio.projects.disabilities.description'),
+      image: work12,
+      technologies: ["React Native","Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.smk.title'),
+      category: t('portfolio.projects.smk.category'),
+      description: t('portfolio.projects.smk.description'),
+      image: work13,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.roman.title'),
+      category: t('portfolio.projects.roman.category'),
+      description: t('portfolio.projects.roman.description'),
+      image: work14,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.roma.title'),
+      category: t('portfolio.projects.roma.category'),
+      description: t('portfolio.projects.roma.description'),
+      image: work15,
+      technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
     }
   ];
 
-  const categories = ["All", "Web Development", "Mobile Development", "System Integration", "Data Visualization", "IoT Development", "Fintech"];
+  const categories = [
+    "All",
+    ...Array.from(new Set(projects.map((p) => p.category)))
+  ];
 
   useEffect(() => {
     if (selectedCategory === "All") {
@@ -190,19 +228,16 @@ const PortfolioPage = () => {
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <div key={project.id} className="tech-card group overflow-hidden">
+            {filteredProjects.map((project, index) => (
+              <div key={index} className="tech-card group overflow-hidden">
                 {/* Project Image */}
-                <div className="relative overflow-hidden rounded-xl mb-6 bg-tech-blue/30 h-48">
-                  <div className="absolute inset-0 bg-gradient-to-br from-tech-cyan/20 to-tech-blue/40 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-tech-cyan/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                        <div className="w-8 h-8 bg-tech-cyan rounded-lg"></div>
-                      </div>
-                      <p className="text-tech-text font-medium">{project.category}</p>
-                    </div>
-                  </div>
-                  
+                <div className="relative overflow-hidden rounded-xl mb-6 h-48">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-tech-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                     <a href={project.link} className="w-12 h-12 bg-tech-cyan rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
@@ -217,24 +252,11 @@ const PortfolioPage = () => {
                 {/* Project Info */}
                 <div className="space-y-4">
                   <div>
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center mb-2">
                       <span className="text-tech-cyan text-sm font-medium">{project.category}</span>
-                      <span className="text-tech-text-muted text-xs">{project.year}</span>
                     </div>
                     <h3 className="text-xl font-bold text-tech-text mb-3">{project.title}</h3>
                     <p className="text-tech-text-muted text-sm mb-4">{project.description}</p>
-                  </div>
-
-                  {/* Project Details */}
-                  <div className="space-y-2 text-xs">
-                    <div className="flex justify-between">
-                      <span className="text-tech-text-muted">Klien:</span>
-                      <span className="text-tech-text">{project.client}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-tech-text-muted">Durasi:</span>
-                      <span className="text-tech-text">{project.duration}</span>
-                    </div>
                   </div>
 
                   {/* Technologies */}
