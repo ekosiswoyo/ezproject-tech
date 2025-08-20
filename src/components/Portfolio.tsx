@@ -17,6 +17,7 @@ import work12 from '@/assets/images/portfolio/work12.png';
 import work13 from '@/assets/images/portfolio/work13.png';
 import work14 from '@/assets/images/portfolio/work14.png';
 import work15 from '@/assets/images/portfolio/work15.png';
+import work16 from '@/assets/images/portfolio/work16.png';
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -26,7 +27,7 @@ const Portfolio = () => {
       category: t('portfolio.projects.migration.category'),
       description: t('portfolio.projects.migration.description'),
       image: work1,
-      technologies: ["Pentaho Data Integration","DB2","Oracle"],
+      technologies: ["Pentaho Data Integration", "DB2", "Oracle"],
       link: "#",
       github: "#"
     },
@@ -70,7 +71,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.lelang.title'),
       category: t('portfolio.projects.lelang.category'),
       description: t('portfolio.projects.lelang.description'),
-      image:work6,
+      image: work6,
       technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -79,7 +80,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.filesharing.title'),
       category: t('portfolio.projects.filesharing.category'),
       description: t('portfolio.projects.filesharing.description'),
-      image:work7,
+      image: work7,
       technologies: ["Nextcloud", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -88,7 +89,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.kpi.title'),
       category: t('portfolio.projects.kpi.category'),
       description: t('portfolio.projects.kpi.description'),
-      image:work8,
+      image: work8,
       technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -97,7 +98,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.zimbra.title'),
       category: t('portfolio.projects.zimbra.category'),
       description: t('portfolio.projects.zimbra.description'),
-      image:work9,
+      image: work9,
       technologies: ["ZImbra", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -106,7 +107,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.leave.title'),
       category: t('portfolio.projects.leave.category'),
       description: t('portfolio.projects.leave.description'),
-      image:work10,
+      image: work10,
       technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -115,7 +116,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.recruitment.title'),
       category: t('portfolio.projects.recruitment.category'),
       description: t('portfolio.projects.recruitment.description'),
-      image:work11,
+      image: work11,
       technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -124,8 +125,8 @@ const Portfolio = () => {
       title: t('portfolio.projects.disabilities.title'),
       category: t('portfolio.projects.disabilities.category'),
       description: t('portfolio.projects.disabilities.description'),
-      image:work12,
-      technologies: ["React Native","Laravel", "MySql", "centOS"],
+      image: work12,
+      technologies: ["React Native", "Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
     },
@@ -133,7 +134,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.smk.title'),
       category: t('portfolio.projects.smk.category'),
       description: t('portfolio.projects.smk.description'),
-      image:work13,
+      image: work13,
       technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -142,7 +143,7 @@ const Portfolio = () => {
       title: t('portfolio.projects.roman.title'),
       category: t('portfolio.projects.roman.category'),
       description: t('portfolio.projects.roman.description'),
-      image:work14,
+      image: work14,
       technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
@@ -151,8 +152,17 @@ const Portfolio = () => {
       title: t('portfolio.projects.roma.title'),
       category: t('portfolio.projects.roma.category'),
       description: t('portfolio.projects.roma.description'),
-      image:work15,
+      image: work15,
       technologies: ["Laravel", "MySql", "centOS"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.sijitu.title'),
+      category: t('portfolio.projects.sijitu.category'),
+      description: t('portfolio.projects.sijitu.description'),
+      image: work16,
+      technologies: ["Python", "Artificial Intelligence"],
       link: "#",
       github: "#"
     }
@@ -181,8 +191,8 @@ const Portfolio = () => {
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                
-                
+
+
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-tech-dark/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
                   <a href={project.link} className="w-12 h-12 bg-tech-cyan rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">

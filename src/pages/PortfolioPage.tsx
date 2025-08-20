@@ -19,6 +19,7 @@ import work12 from '@/assets/images/portfolio/work12.png';
 import work13 from '@/assets/images/portfolio/work13.png';
 import work14 from '@/assets/images/portfolio/work14.png';
 import work15 from '@/assets/images/portfolio/work15.png';
+import work16 from '@/assets/images/portfolio/work16.png';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -36,7 +37,7 @@ const PortfolioPage = () => {
       category: t('portfolio.projects.migration.category'),
       description: t('portfolio.projects.migration.description'),
       image: work1,
-      technologies: ["Pentaho Data Integration","DB2","Oracle"],
+      technologies: ["Pentaho Data Integration", "DB2", "Oracle"],
       link: "#",
       github: "#"
     },
@@ -135,7 +136,7 @@ const PortfolioPage = () => {
       category: t('portfolio.projects.disabilities.category'),
       description: t('portfolio.projects.disabilities.description'),
       image: work12,
-      technologies: ["React Native","Laravel", "MySql", "centOS"],
+      technologies: ["React Native", "Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
     },
@@ -165,6 +166,15 @@ const PortfolioPage = () => {
       technologies: ["Laravel", "MySql", "centOS"],
       link: "#",
       github: "#"
+    },
+    {
+      title: t('portfolio.projects.sijitu.title'),
+      category: t('portfolio.projects.sijitu.category'),
+      description: t('portfolio.projects.sijitu.description'),
+      image: work16,
+      technologies: ["Python", "Artificial Intelligence"],
+      link: "#",
+      github: "#"
     }
   ];
 
@@ -184,7 +194,7 @@ const PortfolioPage = () => {
   return (
     <div className="min-h-screen bg-tech-dark">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section id="portfolio" className="section-padding bg-tech-darker">
         <div className="section-container">
@@ -194,13 +204,13 @@ const PortfolioPage = () => {
               Kembali ke Beranda
             </Link>
           </div>
-          
+
           <div className="text-center mb-16 space-y-4">
             <h1 className="heading-xl">
               Portfolio <span className="text-tech-cyan">Lengkap</span> Kami
             </h1>
             <p className="body-lg max-w-4xl mx-auto">
-              Jelajahi koleksi lengkap proyek-proyek yang telah kami selesaikan dengan berbagai teknologi terdepan. 
+              Jelajahi koleksi lengkap proyek-proyek yang telah kami selesaikan dengan berbagai teknologi terdepan.
               Setiap proyek mencerminkan komitmen kami terhadap kualitas, inovasi, dan kepuasan klien.
             </p>
           </div>
@@ -215,11 +225,10 @@ const PortfolioPage = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "bg-tech-cyan text-tech-dark"
-                    : "bg-tech-blue/30 text-tech-text hover:bg-tech-cyan/20 hover:text-tech-cyan"
-                }`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category
+                  ? "bg-tech-cyan text-tech-dark"
+                  : "bg-tech-blue/30 text-tech-text hover:bg-tech-cyan/20 hover:text-tech-cyan"
+                  }`}
               >
                 {category}
               </button>
@@ -299,7 +308,7 @@ const PortfolioPage = () => {
                 Siap Memulai Proyek <span className="text-tech-cyan">Anda?</span>
               </h3>
               <p className="text-tech-text-muted mb-6">
-                Mari diskusikan kebutuhan proyek Anda dengan tim expert kami. 
+                Mari diskusikan kebutuhan proyek Anda dengan tim expert kami.
                 Konsultasi gratis untuk menentukan solusi terbaik.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -2,6 +2,8 @@
 import { Globe, Smartphone, Settings, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from '@/contexts/LanguageContext';
+import RotatingLogos from "./ui/rotating-logos";
+
 
 const Services = () => {
   const { t } = useLanguage();
@@ -89,7 +91,7 @@ const Services = () => {
               </div>
 
               <div className="mt-6">
-                <Link 
+                <Link
                   to={`/service/${service.slug}`}
                   className="text-tech-cyan font-semibold hover:text-tech-cyan-glow transition-colors duration-300 group inline-flex items-center"
                 >
@@ -120,6 +122,20 @@ const Services = () => {
             </div>
           </div>
         </div>
+        {/*User Product*/}
+
+        {/* Client Logos Carousel */}
+        <div className="text-center mt-20">
+          <div className="tech-card max-w-5xl mx-auto px-12 py-6">
+            <h3 className="heading-sm mb-4">
+              {t('services.carousel.user')}
+            </h3>
+            <div className="mt-8">
+              <RotatingLogos />
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

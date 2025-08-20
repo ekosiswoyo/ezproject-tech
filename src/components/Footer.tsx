@@ -14,7 +14,9 @@ const Footer = () => {
       t('footer.services.mobile'),
       t('footer.services.desktop'),
       t('footer.services.integration'),
-      t('footer.services.consulting')
+      t('footer.services.consulting'),
+      t('footer.services.iot'),
+      t('footer.services.ai')
     ],
     company: [
       t('footer.company.about'),
@@ -51,7 +53,7 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="section-container py-16">
         <div className="grid lg:grid-cols-6 gap-8">
-          
+
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div>

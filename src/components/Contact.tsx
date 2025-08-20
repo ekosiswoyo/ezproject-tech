@@ -102,6 +102,8 @@ const Contact = () => {
     t('contact.services.integration'),
     t('contact.services.consulting'),
     t('contact.services.maintenance'),
+    t('contact.services.iot'),
+    t('contact.services.ai'),
     t('contact.services.other')
   ];
 
@@ -308,11 +310,10 @@ const Contact = () => {
                 {/* Status Message */}
                 {submitStatus.type && (
                   <div
-                    className={`p-4 rounded-xl flex items-center space-x-3 ${
-                      submitStatus.type === "success"
-                        ? "bg-green-500/20 border border-green-500/30"
-                        : "bg-red-500/20 border border-red-500/30"
-                    }`}
+                    className={`p-4 rounded-xl flex items-center space-x-3 ${submitStatus.type === "success"
+                      ? "bg-green-500/20 border border-green-500/30"
+                      : "bg-red-500/20 border border-red-500/30"
+                      }`}
                   >
                     {submitStatus.type === "success" ? (
                       <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
@@ -320,11 +321,10 @@ const Contact = () => {
                       <AlertCircle className="h-5 w-5 text-red-400 flex-shrink-0" />
                     )}
                     <p
-                      className={`text-sm ${
-                        submitStatus.type === "success"
-                          ? "text-green-300"
-                          : "text-red-300"
-                      }`}
+                      className={`text-sm ${submitStatus.type === "success"
+                        ? "text-green-300"
+                        : "text-red-300"
+                        }`}
                     >
                       {submitStatus.message}
                     </p>
@@ -334,9 +334,8 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`btn-glow w-full group transition-all duration-300 ${
-                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                  }`}
+                  className={`btn-glow w-full group transition-all duration-300 ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                    }`}
                 >
                   {isSubmitting ? (
                     <>

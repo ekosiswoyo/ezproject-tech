@@ -32,7 +32,7 @@ const translations = {
     'nav.portfolio': 'Portfolio',
     'nav.contact': 'Contact',
     'nav.getStarted': 'Get Started',
-    
+
     // Hero Section
     'hero.badge': '🚀 Leading IT Solutions Provider',
     'hero.title': 'Empowering Your',
@@ -44,12 +44,12 @@ const translations = {
     'hero.stats.clients': 'Happy Clients',
     'hero.stats.experience': 'Years Experience',
     'hero.stats.satisfaction': 'Satisfaction Rate',
-    
+
     // About Section
     // Statistics Section
     'statistics.title': 'Our Achievements',
     'statistics.description': 'Numbers that prove our dedication and quality of service in delivering the best technology solutions.',
-    
+
     'about.badge': '💼 About EzProject',
     'about.title': 'Innovative Solutions for',
     'about.titleHighlight': 'Modern Businesses',
@@ -75,7 +75,7 @@ const translations = {
     'about.advantages.support.description': 'Our technical support team is ready to help you anytime, anywhere.',
     'about.advantages.pricing.title': 'Competitive Pricing',
     'about.advantages.pricing.description': 'We offer transparent and competitive pricing without compromising on quality.',
-    
+
     // Why Choose Us Section
     'whyChoose.title': 'Why Choose',
     'whyChoose.description': 'We are committed to providing the best technology solutions with a professional approach and results that exceed expectations.',
@@ -91,7 +91,7 @@ const translations = {
     'whyChoose.onTime.description': 'Commitment to completing projects according to agreed timelines with structured project management.',
     'whyChoose.support.title': '24/7 Support',
     'whyChoose.support.description': 'Continuous support services with fast response times to ensure systems always run optimally.',
-    
+
     // Services Section
     'services.badge': '🛠️ Our Services',
     'services.title': 'Professional',
@@ -126,8 +126,8 @@ const translations = {
     'services.cta.title': 'Ready for Digital Transformation?',
     'services.cta.description': 'Let\'s discuss how we can help develop the right technology solutions for your business needs.',
     'services.cta.consultation': 'Free Consultation',
-    'services.cta.portfolio': 'View Portfolio',
-    
+    'services.carousel.user': 'Users of the products, services, and features',
+
     // Portfolio Section
     'portfolio.badge': '🎯 Our Work',
     'portfolio.title': 'Our Latest',
@@ -173,13 +173,18 @@ const translations = {
     'portfolio.projects.roman.description': 'Company profile website for Roman Furniture showcasing their premium furniture collections, custom design services, and showroom locations.',
     'portfolio.projects.roma.title': 'Roma Bangunan',
     'portfolio.projects.roma.category': 'Web Development',
-    'portfolio.projects.roma.description': 'Company profile website for Roma Bangunan showcasing their building materials catalog, construction supplies, and multiple store locations.', 
+    'portfolio.projects.roma.description': 'Company profile website for Roma Bangunan showcasing their building materials catalog, construction supplies, and multiple store locations.',
     'portfolio.projects.kpi.title': 'KPI Online BPR MAA',
     'portfolio.projects.kpi.category': 'Web Development',
-    'portfolio.projects.kpi.description': 'Online key performance indicator system for BPR MAA employees, providing real-time performance tracking and analysis.', 
+    'portfolio.projects.kpi.description': 'Online key performance indicator system for BPR MAA employees, providing real-time performance tracking and analysis.',
     'portfolio.projects.leave.title': 'Leave Application BPR MAA',
     'portfolio.projects.leave.category': 'Web Development',
     'portfolio.projects.leave.description': 'Leave application system for BPR MAA employees, providing a seamless and efficient leave process.',
+    'portfolio.projects.sijitu.title': 'Accuris Face Recognition System',
+    'portfolio.projects.sijitu.category': 'Artificial Intelligence',
+    'portfolio.projects.sijitu.description': 'SIJITU is an AI-powered anti-money laundering application designed to help institutions verify identities and detect suspicious activities. One of its core features is facial recognition, which enables accurate and automated identity verification. The system is ideal for financial compliance, risk monitoring, and secure onboarding processes.',
+
+
 
 
     // Testimonials Section
@@ -187,7 +192,7 @@ const translations = {
     'testimonials.titleHighlight': 'Testimonials',
     'testimonials.titleSuffix': 'We Serve',
     'testimonials.description': 'Hear directly from clients who have experienced the benefits of technology solutions from EzProject.',
-    
+
     // Footer Section
     'footer.description': 'Empowering businesses with cutting-edge technology solutions. We are committed to delivering digital innovations that drive your business growth and transformation.',
     'footer.followUs': 'Follow Us',
@@ -205,6 +210,8 @@ const translations = {
     'footer.services.desktop': 'Desktop Apps',
     'footer.services.integration': 'System Integration',
     'footer.services.consulting': 'IT Consulting',
+    'footer.services.iot': 'Internet Of Things Product',
+    'footer.services.ai': 'Artificial Intelligence system',
     'footer.company.about': 'About Us',
     'footer.company.team': 'Team',
     'footer.company.career': 'Career',
@@ -219,7 +226,7 @@ const translations = {
     'footer.legal.terms': 'Terms of Service',
     'footer.legal.cookie': 'Cookie Policy',
     'footer.legal.sla': 'SLA Agreement',
-    
+
     // Service Detail Section
     'serviceDetail.website.title': 'Website Development',
     'serviceDetail.website.subtitle': 'Professional Website Solutions for Modern Business',
@@ -245,7 +252,7 @@ const translations = {
     'serviceDetail.app.title': 'Application Development',
     'serviceDetail.app.subtitle': 'Powerful Mobile & Desktop Applications',
     'serviceDetail.app.description': 'We develop user-friendly mobile and desktop applications with high performance for all platforms. From native mobile apps to cross-platform solutions, we create applications that provide optimal user experience.',
-    
+
     // Contact Section
     'contact.map.title': 'Our Location',
     'contact.map.button': 'View on Google Maps',
@@ -254,7 +261,7 @@ const translations = {
     'contact.form.errors.connectionError': 'Connection error. Please try again later.',
     'contact.services.desktop': 'Desktop Applications',
     'contact.services.integration': 'System Integration',
-    
+
     // Contact Section
     'contact.badge': '📞 Get In Touch',
     'contact.title': 'Contact',
@@ -274,6 +281,8 @@ const translations = {
     'contact.services.system': 'System Integration',
     'contact.services.consulting': 'IT Consulting',
     'contact.services.maintenance': 'System Maintenance',
+    'contact.services.iot': 'Internet Of Things Product',
+    'contact.services.ai': 'Artificial Intelligence System',
     'contact.services.other': 'Other Services',
     'contact.chat.title': 'Live Chat',
     'contact.chat.description': 'Need immediate help? Chat with our support team.',
@@ -309,7 +318,7 @@ const translations = {
     'contact.form.serverError': 'Server connection error. Please try again later.',
     'contact.location.title': 'Office Location',
     'contact.location.viewMap': 'View on Google Maps',
-    
+
   },
   id: {
     // Navbar
@@ -319,7 +328,7 @@ const translations = {
     'nav.portfolio': 'Portfolio',
     'nav.contact': 'Kontak',
     'nav.getStarted': 'Mulai Sekarang',
-    
+
     // Hero Section
     'hero.badge': '🚀 Penyedia Solusi IT Terdepan',
     'hero.title': 'Memberdayakan',
@@ -331,12 +340,12 @@ const translations = {
     'hero.stats.clients': 'Klien Puas',
     'hero.stats.experience': 'Tahun Pengalaman',
     'hero.stats.satisfaction': 'Tingkat Kepuasan',
-    
+
     // About Section
     // Statistics Section
     'statistics.title': 'Pencapaian Kami',
     'statistics.description': 'Angka-angka yang membuktikan dedikasi dan kualitas layanan kami dalam menghadirkan solusi teknologi terbaik.',
-    
+
     'about.badge': '💼 Tentang EzProject',
     'about.title': 'Solusi Inovatif untuk',
     'about.titleHighlight': 'Bisnis Modern',
@@ -362,7 +371,7 @@ const translations = {
     'about.advantages.support.description': 'Tim dukungan teknis kami siap membantu Anda kapan saja, di mana saja.',
     'about.advantages.pricing.title': 'Harga Kompetitif',
     'about.advantages.pricing.description': 'Kami menawarkan harga yang transparan dan kompetitif tanpa mengorbankan kualitas.',
-    
+
     // Why Choose Us Section
     'whyChoose.title': 'Mengapa Memilih',
     'whyChoose.description': 'Kami berkomitmen memberikan solusi teknologi terbaik dengan pendekatan yang profesional dan hasil yang melampaui ekspektasi.',
@@ -378,7 +387,7 @@ const translations = {
     'whyChoose.onTime.description': 'Komitmen menyelesaikan proyek sesuai timeline yang disepakati dengan project management yang terstruktur.',
     'whyChoose.support.title': 'Support 24/7',
     'whyChoose.support.description': 'Layanan support berkelanjutan dengan response time cepat untuk memastikan sistem selalu berjalan optimal.',
-    
+
     // Services Section
     'services.badge': '🛠️ Layanan Kami',
     'services.title': 'Layanan',
@@ -414,7 +423,7 @@ const translations = {
     'services.cta.description': 'Mari diskusikan bagaimana kami dapat membantu mengembangkan solusi teknologi yang tepat untuk kebutuhan bisnis Anda.',
     'services.cta.consultation': 'Konsultasi Gratis',
     'services.cta.portfolio': 'Lihat Portfolio',
-    
+
     // Portfolio Section
     'portfolio.badge': '🎯 Karya Kami',
     'portfolio.title': 'Portfolio',
@@ -440,13 +449,13 @@ const translations = {
     'portfolio.projects.lelang.title': 'Digital Banking App',
     'portfolio.projects.lelang.category': 'Fintech',
     'portfolio.projects.lelang.description': 'Aplikasi mobile banking dengan fitur keamanan tinggi dan user experience yang optimal.',
-    
+
     // Testimonials Section
     'testimonials.title': 'Testimoni',
     'testimonials.titleHighlight': 'Klien',
     'testimonials.titleSuffix': 'Kami',
     'testimonials.description': 'Dengarkan langsung dari klien-klien yang telah merasakan manfaat solusi teknologi dari EzProject.',
-    
+
     // Contact Section
     'contact.badge': '📞 Hubungi Kami',
     'contact.title': 'Hubungi',
@@ -508,7 +517,7 @@ const translations = {
     'contact.form.errors.connectionError': 'Kesalahan koneksi. Silakan coba lagi nanti.',
     'contact.services.desktop': 'Aplikasi Desktop',
     'contact.services.integration': 'Integrasi Sistem',
-    
+
     // Service Detail Section
     'serviceDetail.website.title': 'Pengembangan Website',
     'serviceDetail.website.subtitle': 'Solusi Website Profesional untuk Bisnis Modern',
@@ -522,7 +531,7 @@ const translations = {
     'serviceDetail.app.title': 'Pengembangan Aplikasi',
     'serviceDetail.app.subtitle': 'Aplikasi Mobile & Desktop yang Powerful',
     'serviceDetail.app.description': 'Kami mengembangkan aplikasi mobile dan desktop yang user-friendly dengan performa tinggi untuk semua platform. Dari aplikasi mobile native hingga solusi cross-platform, kami menciptakan aplikasi yang memberikan pengalaman pengguna optimal.',
-    
+
   },
 };
 
