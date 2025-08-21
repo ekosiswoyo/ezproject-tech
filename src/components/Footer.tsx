@@ -41,11 +41,11 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" }
+    // { icon: Facebook, href: "#", label: "Facebook" },
+    // { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "www.instagram.com/ezproject", label: "Instagram" },
+    // { icon: Linkedin, href: "#", label: "LinkedIn" },
+    // { icon: Github, href: "#", label: "GitHub" }
   ];
 
   return (
@@ -84,8 +84,8 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-2">
               <p className="text-tech-text font-semibold">{t('footer.quickContact')}</p>
-              <p className="text-tech-text-muted text-sm">+62 21 5555 7777</p>
-              <p className="text-tech-text-muted text-sm">noreply@ezproject.tech</p>
+              <p className="text-tech-text-muted text-sm">+62 851 5603 5713</p>
+              <p className="text-tech-text-muted text-sm">cs@ezproject.tech</p>
             </div>
           </div>
 

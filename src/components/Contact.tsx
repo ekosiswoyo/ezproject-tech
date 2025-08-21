@@ -78,21 +78,21 @@ const Contact = () => {
     {
       icon: Phone,
       title: t('contact.info.phone.title'),
-      details: ["+62 21 5555 7777", "+62 811 9999 8888"],
-      description: t('contact.info.phone.description')
+      details: ["+62 851 5603 5713"],
+      // description: t('contact.info.phone.description')
     },
     {
       icon: Mail,
       title: t('contact.info.email.title'),
-      details: ["noreply@ezproject.tech", "support@ezproject.tech"],
-      description: t('contact.info.email.description')
+      details: ["cs@ezproject.tech"],
+      // description: t('contact.info.email.description')
     },
-    {
-      icon: MapPin,
-      title: t('contact.info.office.title'),
-      details: ["Jl. Sudirman No. 123", "Jakarta Selatan 12190"],
-      description: "Indonesia"
-    }
+    // {
+    //   icon: MapPin,
+    //   title: t('contact.info.office.title'),
+    //   details: ["Jl. Sudirman No. 123", "Jakarta Selatan 12190"],
+    //   description: "Indonesia"
+    // }
   ];
 
   const services = [
@@ -355,27 +355,7 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-        <div className="mt-16">
-          <div className="tech-card p-8">
-            <h3 className="heading-sm mb-6 text-center">
-              {t("contact.map.title")}
-            </h3>
-            <div className="bg-tech-blue/20 rounded-xl h-64 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-12 w-12 text-tech-cyan mx-auto mb-4" />
-                <p className="text-tech-text font-medium">
-                  Jl. Sudirman No. 123
-                </p>
-                <p className="text-tech-text-muted">
-                  Jakarta Selatan 12190, Indonesia
-                </p>
-                <button className="btn-outline-glow mt-4">
-                  {t("contact.map.button")}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </section>
   );
