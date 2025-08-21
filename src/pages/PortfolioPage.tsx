@@ -20,6 +20,8 @@ import work13 from '@/assets/images/portfolio/work13.png';
 import work14 from '@/assets/images/portfolio/work14.png';
 import work15 from '@/assets/images/portfolio/work15.png';
 import work16 from '@/assets/images/portfolio/work16.png';
+import work17 from '@/assets/images/portfolio/work17.png';
+import work18 from '@/assets/images/portfolio/work18.png';
 
 const PortfolioPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -175,7 +177,25 @@ const PortfolioPage = () => {
       technologies: ["Python", "Artificial Intelligence"],
       link: "#",
       github: "#"
-    }
+    },
+    {
+      title: t('portfolio.projects.kosman.title'),
+      category: t('portfolio.projects.kosman.category'),
+      description: t('portfolio.projects.kosman.description'),
+      image: work17,
+      technologies: ["Laravel", "MySql"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.barbershop.title'),
+      category: t('portfolio.projects.barbershop.category'),
+      description: t('portfolio.projects.barbershop.description'),
+      image: work18,
+      technologies: ["Laravel", "MySql"],
+      link: "#",
+      github: "#"
+    },
   ];
 
   const categories = [

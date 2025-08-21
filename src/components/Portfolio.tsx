@@ -18,6 +18,8 @@ import work13 from '@/assets/images/portfolio/work13.png';
 import work14 from '@/assets/images/portfolio/work14.png';
 import work15 from '@/assets/images/portfolio/work15.png';
 import work16 from '@/assets/images/portfolio/work16.png';
+import work17 from '@/assets/images/portfolio/work17.png';
+import work18 from '@/assets/images/portfolio/work18.png';
 
 const Portfolio = () => {
   const { t } = useLanguage();
@@ -165,7 +167,25 @@ const Portfolio = () => {
       technologies: ["Python", "Artificial Intelligence"],
       link: "#",
       github: "#"
-    }
+    },
+    {
+      title: t('portfolio.projects.kosman.title'),
+      category: t('portfolio.projects.kosman.category'),
+      description: t('portfolio.projects.kosman.description'),
+      image: work17,
+      technologies: ["Laravel", "MySql"],
+      link: "#",
+      github: "#"
+    },
+    {
+      title: t('portfolio.projects.barbershop.title'),
+      category: t('portfolio.projects.barbershop.category'),
+      description: t('portfolio.projects.barbershop.description'),
+      image: work18,
+      technologies: ["Laravel", "MySql"],
+      link: "#",
+      github: "#"
+    },
   ];
 
   return (
@@ -181,7 +201,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.sort(() => Math.random() - 0.5).slice(0, 6).map((project, index) => (
             <div key={index} className="tech-card group overflow-hidden">
               {/* Project Image */}
               <div className="relative overflow-hidden rounded-xl mb-6 h-48">
