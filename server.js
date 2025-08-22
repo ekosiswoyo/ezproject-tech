@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://nefix.studio', 'https://www.nefix.studio'] 
+    ? ['http://ezproject.tech', 'https://ezproject.tech', 'http://www.ezproject.tech', 'https://www.ezproject.tech'] 
     : ['http://localhost:3000', 'http://localhost:8081', 'http://localhost:5173']
 }));
 app.use(bodyParser.json({ limit: '10mb' }));
