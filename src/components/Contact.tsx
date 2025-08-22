@@ -334,7 +334,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`btn-glow w-full group transition-all duration-300 ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+                  className={`btn-glow w-full group inline-flex items-center justify-center transition-all duration-300 ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                     }`}
                 >
                   {isSubmitting ? (
@@ -355,7 +355,7 @@ const Contact = () => {
         </div>
 
         {/* Map Section */}
-      
+
       </div>
     </section>
   );

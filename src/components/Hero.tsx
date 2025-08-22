@@ -39,7 +39,7 @@ const Hero = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
-                  className="btn-glow group"
+                  className="btn-glow group inline-flex items-center justify-center"
                   onClick={(e: React.MouseEvent) => {
                     e.preventDefault();
                     document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
@@ -57,13 +57,13 @@ const Hero = () => {
               {/* Stats */}
               <div className="flex flex-wrap gap-8 pt-8 pb-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-tech-cyan">500+</div>
+                  <div className="text-3xl font-bold text-tech-cyan">15+</div>
                   <div className="text-tech-text-muted text-sm">
                     {t("hero.stats.projects")}
                   </div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-tech-cyan">200+</div>
+                  <div className="text-3xl font-bold text-tech-cyan">50+</div>
                   <div className="text-tech-text-muted text-sm">
                     {t("hero.stats.clients")}
                   </div>
