@@ -302,22 +302,22 @@ const PortfolioPage = () => {
           </div>
 
           {/* Stats Section */}
-          <div className="mt-20 grid md:grid-cols-4 gap-8 text-center">
+          <div className="mt-20 grid md:grid-cols-3 gap-8 text-center">
             <div className="tech-card">
               <div className="text-3xl font-bold text-tech-cyan mb-2">{projects.length}+</div>
-              <div className="text-tech-text-muted">Proyek Selesai</div>
+              <div className="text-tech-text-muted">{t('about.whyChooseUs.consultation.project')}</div>
             </div>
-            <div className="tech-card">
+            {/* <div className="tech-card">
               <div className="text-3xl font-bold text-tech-cyan mb-2">{categories.length - 1}</div>
               <div className="text-tech-text-muted">Kategori Layanan</div>
-            </div>
+            </div> */}
             <div className="tech-card">
               <div className="text-3xl font-bold text-tech-cyan mb-2">100%</div>
-              <div className="text-tech-text-muted">Kepuasan Klien</div>
+              <div className="text-tech-text-muted">{t('about.whyChooseUs.consultation.satisfaction')}</div>
             </div>
             <div className="tech-card">
               <div className="text-3xl font-bold text-tech-cyan mb-2">24/7</div>
-              <div className="text-tech-text-muted">Support</div>
+              <div className="text-tech-text-muted">{t('about.whyChooseUs.consultation.support')}</div>
             </div>
           </div>
 

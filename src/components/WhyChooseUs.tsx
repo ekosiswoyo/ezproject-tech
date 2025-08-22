@@ -67,30 +67,29 @@ const WhyChooseUs = () => {
         <div className="mt-20">
           <div className="tech-card p-12 text-center">
             <h3 className="heading-sm mb-6">
-              Siap Memulai Proyek Bersama Kami?
+              {t('about.whyChooseUs.consultation.title')}
             </h3>
             <p className="body-md mb-8 max-w-2xl mx-auto">
-              Konsultasikan kebutuhan teknologi bisnis Anda dengan tim expert kami. 
-              Dapatkan solusi yang tepat untuk mengakselerasi pertumbuhan perusahaan.
+              {t('about.whyChooseUs.consultation.description')}
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-tech-cyan mb-2">500+</div>
-                <div className="text-tech-text-muted">Proyek Selesai</div>
+                <div className="text-3xl font-bold text-tech-cyan mb-2">15+</div>
+                <div className="text-tech-text-muted">{t('about.whyChooseUs.consultation.project')}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-tech-cyan mb-2">98%</div>
-                <div className="text-tech-text-muted">Tingkat Kepuasan</div>
+                <div className="text-3xl font-bold text-tech-cyan mb-2">100%</div>
+                <div className="text-tech-text-muted">{t('about.whyChooseUs.consultation.satisfaction')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-tech-cyan mb-2">24/7</div>
-                <div className="text-tech-text-muted">Support Service</div>
+                <div className="text-tech-text-muted">{t('about.whyChooseUs.consultation.support')}</div>
               </div>
             </div>
 
             <a href="#contact" className="btn-glow">
-              Mulai Konsultasi Gratis
+              {t('about.whyChooseUs.consultation.start')}
             </a>
           </div>
         </div>
