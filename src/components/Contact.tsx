@@ -78,7 +78,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: t('contact.info.phone.title'),
-      details: ["+62 851 5603 5713"],
+      details: ["+62 859 2136 6283"],
       // description: t('contact.info.phone.description')
     },
     {

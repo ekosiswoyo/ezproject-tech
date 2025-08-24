@@ -84,7 +84,7 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-2">
               <p className="text-tech-text font-semibold">{t('footer.quickContact')}</p>
-              <p className="text-tech-text-muted text-sm">+62 851 5603 5713</p>
+              <p className="text-tech-text-muted text-sm">+62 859 2136 6283</p>
               <p className="text-tech-text-muted text-sm">cs@ezproject.tech</p>
             </div>
           </div>
